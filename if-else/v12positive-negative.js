@@ -1,12 +1,11 @@
-// 12. Check if a number is positive, negative, or zero.
+// 2. Check if a number is positive, negative, or zero.
 
-num = 10;
-if (num > 0) {
-  console.log("Positive");
-} else if (num < 0) {
-  console.log("Negative");
+let number = 10;
+
+if (number > 0) {
+  console.log(number, "it is positive number");
+} else if (number < 0) {
+  console.log(number, "it is negative number");
 } else {
-  console.log("Zero");
+  console.log(number, "it is Zero");
 }
-
-

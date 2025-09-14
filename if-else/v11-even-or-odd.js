@@ -1,10 +1,9 @@
-// 11. Check if a number is even or odd using if-else.
+//1. Check if a number is even or odd using if-else.
 
+let num = 10;
 
-num = 5;
 if (num % 2 === 0) {
-  console.log("even");
+  console.log(num, "even");
 } else {
-  console.log("odd");
+  console.log(num, "odd");
 }
-
