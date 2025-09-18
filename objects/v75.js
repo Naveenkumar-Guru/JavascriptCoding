@@ -6,7 +6,6 @@ let mobiles = {
   specs: {
     screenType: "Super AMOLED",
     batteryCp: "5000mAh",
-    waterproof: true,
   },
   features: ["5G", "face unlock"],
 };

@@ -1,3 +1,4 @@
+//73.Add a method to object to return full name.
 let employee = {
   firstName: "Naveen",
   lastName: "Kumar",
