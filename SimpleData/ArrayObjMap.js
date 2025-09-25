@@ -1,45 +1,45 @@
 let Employees = [
   {
     emp_id: 1,
-    empNames: "Naveen",
+    emp_Names: "Naveen",
     emp_loc: "Hyderabad",
-    emp_mail: "naveen.k@company.com",
+    emp_mail: "naveen@company.com",
     emp_phone_no: "9876543210",
     emp_salary: "32000",
     emp_pf: "PF201A",
   },
   {
     emp_id: 2,
-    empNames: "Ravi",
+    emp_Names: "Ravi",
     emp_loc: "Bangalore",
-    emp_mail: "ravi.m@company.com",
+    emp_mail: "ravi@company.com",
     emp_phone_no: "9876543211",
     emp_salary: "28000",
     emp_pf: "PF202B",
   },
   {
     emp_id: 3,
-    empNames: "Kiran",
+    emp_Names: "Kiran",
     emp_loc: "Chennai",
-    emp_mail: "kiran.s@company.com",
+    emp_mail: "kiran@company.com",
     emp_phone_no: "9876543212",
     emp_salary: "35000",
     emp_pf: "PF203C",
   },
   {
     emp_id: 4,
-    empNames: "Ajay",
+    emp_Names: "Ajay",
     emp_loc: "Pune",
-    emp_mail: "ajay.r@company.com",
+    emp_mail: "ajay@company.com",
     emp_phone_no: "9876543213",
     emp_salary: "30000",
     emp_pf: "PF204D",
   },
   {
     emp_id: 5,
-    empNames: "Manoj",
+    emp_Names: "Manoj",
     emp_loc: "Delhi",
-    emp_mail: "manoj.t@company.com",
+    emp_mail: "manoj@company.com",
     emp_phone_no: "9876543214",
     emp_salary: "27000",
     emp_pf: "PF205E",
@@ -47,27 +47,46 @@ let Employees = [
 ];
 
 // // m-1
-// let EmpData1 = Employees.map((emp) => emp);
-// console.log(EmpData1);
+let EmpData1 = Employees.map((emp) => emp);
+console.log("DATA:-1", EmpData1);
 
-// // m-2
-// let EmpData2 = Employees.map((e) => {
-//   return {
-//     empid: e.emp_id,
-//     empNames: e.emp,
-//     emploc: e.emp_loc,
-//     empmail: e.emp_mail,
-//     empPhoneNo: e.emp_phone_no,
-//     empSalary: e.emp_salary,
-//     empPf: e.emp_pf,
-//   };
-// });
-// console.log(EmpData2);
+// m-2
+let EmpData2 = Employees.map((e) => {
+  return {
+    empid: e.emp_id,
+    empName: e.emp_Names,
+    empLoc: e.emp_loc,
+    empmail: e.emp_mail,
+    empPhoneNo: e.emp_phone_no,
+    empSalary: e.emp_salary,
+    empPf: e.emp_pf,
+  };
+});
+console.log("DATA:-2", EmpData2);
 
 //m-3
-let empData3 = Employees.filter((e) => e.emp_salary === "32000").map((e) => [
-  e.emp_id,
-  e.emp_mail,
-]);
+let empData3 = Employees.map((e) => {
+  return [e.emp_id, e.emp_Names, e.emp_mail];
+});
+console.log("DATA:-3", empData3);
 
-console.log(empData3);
+// m-4 filter sal>32000
+let empData4 = Employees.filter((f) => Number(f.emp_salary) >= 32000).map(
+  (e) => {
+    return [e.emp_id, e.emp_Names, e.emp_salary];
+  }
+);
+console.log("DATA:-4", empData4);
+
+// //m-5 ascending order [A-Z]
+Employees.sort((a, b) => a.emp_Names.localeCompare(b.emp_Names));
+let EmpData5 = Employees.map((e) => [e.emp_id, e.emp_Names]);
+console.log("DATA:-5", EmpData5);
+
+// // descending order[Z-A]
+Employees.sort((a, b) => b.emp_id - a.emp_id);
+let EmpDataDsc = Employees.map((e) => {
+  return { EmployeeID: e.emp_id, EmployeeName: e.emp_Names };
+});
+
+console.log("DATA:-5.1", EmpDataDsc);
