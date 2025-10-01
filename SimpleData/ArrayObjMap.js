@@ -77,3 +77,27 @@ let empData4 = Employees.filter((f) => Number(f.emp_salary) >= 32000).map(
   }
 );
 console.log("DATA:-4", empData4);
+
+// //m-5 ascending order [A-Z]
+Employees.sort((a, b) => a.emp_Names.localeCompare(b.emp_Names));
+let EmpData5 = Employees.map((e) => [e.emp_id, e.emp_Names]);
+console.log("DATA:-5", EmpData5);
+
+// // descending order[Z-A]
+Employees.sort((a, b) => b.emp_id - a.emp_id);
+let EmpDataDsc = Employees.map((e) => {
+  return { EmployeeID: e.emp_id, EmployeeName: e.emp_Names };
+});
+
+console.log("DATA:-5.1", EmpDataDsc);
+
+let allHighSalary = Employees.every((emp) => parseInt(emp.emp_salary) > 25000);
+console.log(allHighSalary);
+
+let totalSalary = Employees.reduce((sum, emp) => {
+  // return sum + parseInt(emp.emp_salary);
+  // return sum + +emp.emp_salary;
+  return sum + Number(emp.emp_salary);
+}, 0);
+
+console.log(totalSalary); // 95000
