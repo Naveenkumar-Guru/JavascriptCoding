@@ -2,9 +2,9 @@
 let employees = [
   { name: "Naveen", salary: 65000 },
   { name: "Kiran", salary: 50000 },
-  { name: "Priya", salary: 60000 },
-  { name: "Anil", salary: 45000 },
-  { name: "Ravi", salary: 95000 },
+  { name: "jaswanth", salary: 60000 },
+  { name: "Manoj", salary: 45000 },
+  { name: "Vinod", salary: 95000 },
 ];
 
 let salaries = employees.map((emp) => emp.salary);

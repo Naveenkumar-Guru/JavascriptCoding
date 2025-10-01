@@ -29,7 +29,7 @@ let Employees = [
   {
     emp_id: 4,
     emp_Names: "Ajay",
-    emp_loc: "Pune",
+    emp_loc: "Delhi",
     emp_mail: "ajay@company.com",
     emp_phone_no: "9876543213",
     emp_salary: "30000",
@@ -41,7 +41,7 @@ let Employees = [
     emp_loc: "Delhi",
     emp_mail: "manoj@company.com",
     emp_phone_no: "9876543214",
-    emp_salary: "27000",
+    emp_salary: "24000",
     emp_pf: "PF205E",
   },
 ];
@@ -77,16 +77,3 @@ let empData4 = Employees.filter((f) => Number(f.emp_salary) >= 32000).map(
   }
 );
 console.log("DATA:-4", empData4);
-
-// //m-5 ascending order [A-Z]
-Employees.sort((a, b) => a.emp_Names.localeCompare(b.emp_Names));
-let EmpData5 = Employees.map((e) => [e.emp_id, e.emp_Names]);
-console.log("DATA:-5", EmpData5);
-
-// // descending order[Z-A]
-Employees.sort((a, b) => b.emp_id - a.emp_id);
-let EmpDataDsc = Employees.map((e) => {
-  return { EmployeeID: e.emp_id, EmployeeName: e.emp_Names };
-});
-
-console.log("DATA:-5.1", EmpDataDsc);
